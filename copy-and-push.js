@@ -1,4 +1,5 @@
 export default (arr, n) => {
-  arr.push(n);
-  return arr;
+  const newArray = [...arr];
+  newArray.push(n);
+  return newArray;
 };
