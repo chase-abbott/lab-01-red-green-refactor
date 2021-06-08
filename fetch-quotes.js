@@ -7,7 +7,7 @@ const randomNumberGenerator = (n) => {
   return randomNumber;
 };
 
-export async function fetchRandomQuote() {
+export default async () => {
   const res = await request
     .get(URL);
 
@@ -20,4 +20,4 @@ export async function fetchRandomQuote() {
   };
 
   return formattedQuote;
-}
+};

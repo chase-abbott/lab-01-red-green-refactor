@@ -1,4 +1,4 @@
-import { fetchRandomQuote } from './fetch-quotes.js';
+import  fetchRandomQuote  from './fetch-quotes.js';
 
 describe('fetchRandomQuote', () => {
   it('goes to the futurama API and grabs a random name, text, and image ', async () => {
