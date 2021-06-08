@@ -2,12 +2,16 @@ import request from 'superagent';
 
 const URL = 'http://futuramaapi.herokuapp.com/api/quotes';
 
-// have math.random to generate random index to grab
-export async function fetchQuotes() {
+const randomNumberGenerator = (n) => {
+  const randomNumber = Math.floor((Math.random() * n));
+  return randomNumber;
+};
+
+export async function fetchRandomQuote() {
   const res = await request
     .get(URL);
 
-  const randomQuote = res.body[Math.floor((Math.random() * 20))];
+  const randomQuote = res.body[randomNumberGenerator(20)];
   
   const formattedQuote = {
     name: randomQuote.character,

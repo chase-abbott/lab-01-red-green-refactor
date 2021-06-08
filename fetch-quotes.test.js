@@ -1,8 +1,8 @@
-import { fetchQuotes } from './fetch-quotes.js';
+import { fetchRandomQuote } from './fetch-quotes.js';
 
-describe('fetchQuotes', () => {
-  it('goes to the futurama API and grabs a single name, text, and image ', async () => {
-    const quote = await fetchQuotes();
+describe('fetchRandomQuote', () => {
+  it('goes to the futurama API and grabs a random name, text, and image ', async () => {
+    const quote = await fetchRandomQuote();
     expect(quote).toEqual({
       name: expect.any(String),
       text: expect.any(String),

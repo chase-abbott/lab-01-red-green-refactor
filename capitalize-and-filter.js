@@ -1,5 +1,4 @@
 
-
 export default (arr) => {
   const filteredArray = arr.filter(item => {
     return ((item[0] !== 'f') && (item[0] !== 'F'));
