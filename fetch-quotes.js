@@ -12,12 +12,10 @@ export default async () => {
     .get(URL);
 
   const randomQuote = res.body[randomNumberGenerator(20)];
+
+  const { character: name, quote: text, image } = randomQuote;
   
-  const formattedQuote = {
-    name: randomQuote.character,
-    text: randomQuote.quote,
-    image: randomQuote.image
-  };
+  const formattedQuote = { name, text, image };
 
   return formattedQuote;
 };
