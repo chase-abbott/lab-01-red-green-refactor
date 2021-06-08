@@ -1,19 +1,16 @@
 
 
 export default (arr) => {
-  const newArray = [];
+  const filteredArray = arr.filter(item => {
+    return ((item[0] !== 'f') && (item[0] !== 'F'));
+  });
 
-  for(let i = 0; i < arr.length; i++) {
-    
-    if(typeof arr[i] === 'string'){
-     
-      if(((arr[i][0] !== 'f') && (arr[i][0] !== 'F'))) {
-        const capitalizedItem = arr[i].toUpperCase();
-        newArray.push(capitalizedItem);
-      }
-    } else {
-      newArray.push(arr[i]);
-    }
-  }
+  const newArray = filteredArray.map(item => {
+
+    if(typeof item === 'string') return item.toUpperCase();
+
+    return item;
+  });
+
   return newArray;
 };
